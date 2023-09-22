@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Orbitron:wght@900&display=swap");
+html {
+  box-sizing: border-box;
+  background: linear-gradient(#eee, #a1a1a1);
+  height: 100vh;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+.app-root {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+.app-root header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+.app-root header * {
+  margin: 0;
+}
+.app-root header h1 {
+  font-family: Orbitron, sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #363636;
+}
+.app-root header h2 {
+  font-family: Arizonia, cursive;
+  font-size: 2.5rem;
+  color: #c74ed9;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+/*# sourceMappingURL=app.component.css.map */

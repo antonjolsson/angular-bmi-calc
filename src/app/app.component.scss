@@ -1,0 +1,35 @@
+@use "../styles";
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Orbitron:wght@900&display=swap');
+
+.app-root {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+
+    * {
+      margin: 0;
+    }
+
+    h1 {
+      font-family: Orbitron, sans-serif;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: styles.$dark-text;
+    }
+
+    h2 {
+      font-family: Arizonia, cursive;
+      font-size: 2.5rem;
+      color: styles.$primary-color;
+      text-shadow: 0 0 5px #ffffff;
+    }
+  }
+}
