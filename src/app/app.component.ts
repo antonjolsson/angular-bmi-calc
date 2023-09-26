@@ -11,4 +11,28 @@ export class AppComponent {
   weightUnit = 'kg';
   lengthPlaceholder = 182;
   weightPlaceholder = 73;
+  length = -1
+  weight = -1
+  bmi = -1
+  bmiEverChanged = false
+
+  onLengthChange($event: number) {
+    this.length = $event
+    this.onInputChange()
+  }
+
+  private onInputChange() {
+    if (this.length > 0 && this.weight > 0) {
+      this.bmi = this.weight / Math.pow(this.length / 100, 2)
+      this.bmiEverChanged = true
+    } else {
+      this.bmi = -1
+    }
+    console.log(this.bmi)
+  }
+
+  onWeightChange($event: number) {
+    this.weight = $event
+    this.onInputChange();
+  }
 }

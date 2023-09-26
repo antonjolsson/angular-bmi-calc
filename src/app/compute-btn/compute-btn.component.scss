@@ -1,0 +1,53 @@
+@use "../app.component";
+@use "../../styles";
+
+button {
+  height: 2rem;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.10rem;
+  padding: 0 1.0rem;
+  font-weight: 900;
+  color: styles.$light-grey;
+  background: styles.$grey;
+  box-shadow: 1px 1px 2px rgba(0 0 0 / 0.5);
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+
+  @keyframes enable-button {
+    from {
+      background: styles.$grey;
+      box-shadow: 1px 1px 2px rgba(0 0 0 / 0.5);
+      color: styles.$lightest-grey;
+    }
+    to {
+      background: styles.$secondary-color;
+      box-shadow: 2px 2px 2px rgba(0 0 0 / 0.5);
+      color: white;
+    }
+  }
+
+  @keyframes enable-button-backwards {
+    from {
+      background: styles.$secondary-color;
+      box-shadow: 2px 2px 2px rgba(0 0 0 / 0.5);
+      color: white;
+    }
+    to {
+      background: styles.$grey;
+      box-shadow: 1px 1px 2px rgba(0 0 0 / 0.5);
+      color: styles.$lightest-grey;
+    }
+  }
+
+  &.enabled {
+    animation: 0.2s enable-button forwards;
+  }
+
+  &.disabled {
+    animation: 0.2s enable-button-backwards forwards;
+  }
+}

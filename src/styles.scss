@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Orbitron:wght@900&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@900&display=swap');
+
 $dark-text: #363636;
 $primary-color: #c74ed9;
+$secondary-color: #00a400;
+$darkgrey: #696969;
+$lightest-grey: #d0d0d0;
+$light-grey: #cccccc;
+$grey: #8c8c8c;
 
 html {
   box-sizing: border-box;
   background: linear-gradient(#eee, #a1a1a1);
   height: 100vh;
   font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 @media (max-width: 600px) {

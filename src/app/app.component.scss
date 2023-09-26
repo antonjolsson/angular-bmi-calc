@@ -1,6 +1,10 @@
 @use "../styles";
-@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Orbitron:wght@900&family=Roboto+Condensed" +
-"&display=swap");
+
+@mixin control {
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 .app-root {
   position: absolute;
@@ -40,12 +44,23 @@
   }
 
   main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
     #input-container {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       gap: 1rem;
+      height: 2rem;
+
+      app-input {
+        height: 100%;
+      }
     }
   }
 }
