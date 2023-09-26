@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-bmi-calc';
+  lengthUnit = 'cm';
+  weightUnit = 'kg';
+  lengthPlaceholder = 182;
+  weightPlaceholder = 73;
 }
