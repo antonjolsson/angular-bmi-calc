@@ -20,5 +20,9 @@ label {
     color: styles.$dark-text;
 
     @include app.control;
+
+    &::placeholder {
+      color: styles.$light-grey;
+    }
   }
 }
