@@ -45,6 +45,12 @@ button {
 
   &.enabled {
     animation: 0.2s enable-button forwards;
+    transition: 0.2s scale;
+
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    }
   }
 
   &.disabled {
