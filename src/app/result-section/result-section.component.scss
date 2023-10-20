@@ -1,0 +1,26 @@
+@use "../app.component";
+@use '../../styles';
+p {
+  text-transform: initial;
+  font-size: 1.5rem;
+}
+
+.underweight {
+  color: blue;
+}
+
+.normal-weight {
+  color: styles.$secondary-color;
+}
+
+.overweight {
+  color: #c68100;
+}
+
+.obesity {
+  color: red;
+}
+
+span {
+  font-weight: 900;
+}

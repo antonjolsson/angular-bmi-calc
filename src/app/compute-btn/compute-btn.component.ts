@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-compute-btn',
@@ -8,4 +8,9 @@ import {Component, Input} from '@angular/core';
 export class ComputeBtnComponent {
   @Input() bmi = -1
   @Input() bmiEverChanged = false
+  @Output() newClickEvent = new EventEmitter<void>();
+
+  onClick() {
+    this.newClickEvent.emit()
+  }
 }

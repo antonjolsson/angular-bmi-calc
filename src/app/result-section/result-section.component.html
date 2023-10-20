@@ -1,0 +1,4 @@
+<p>Your BMI is <span [class]="getVerdict()">{{bmi.toFixed(2)}}</span>,
+  which indicates you {{getVerdict() === 'obesity' ? 'have' : 'are'}} <span [class]="getVerdict()">{{getVerdict()}}</span>.</p>
+<p>For a normal BMI (18.5 - 25.0), you should weigh between <span>{{getWeight(length, 18.5).toFixed(2)}}</span>
+  kg and <span>{{getWeight(length, 25.0).toFixed(2)}}</span> kg.</p>

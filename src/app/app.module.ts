@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { InputComponent } from './input/input.component';
 import { ComputeBtnComponent } from './compute-btn/compute-btn.component';
+import { ResultSectionComponent } from './result-section/result-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
-    ComputeBtnComponent
+    ComputeBtnComponent,
+    ResultSectionComponent
   ],
   imports: [
     BrowserModule

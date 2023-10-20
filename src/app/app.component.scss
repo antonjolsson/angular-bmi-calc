@@ -6,6 +6,12 @@
   text-transform: uppercase;
 }
 
+p {
+  @include control;
+  font-size: 1.2rem;
+  color: styles.$dark-text;
+}
+
 .app-root {
   position: absolute;
   left: 50%;
@@ -60,6 +66,16 @@
 
       app-input {
         height: 100%;
+      }
+    }
+
+    app-result-section {
+      &.visible {
+        visibility: visible;
+      }
+
+      &.hidden {
+        visibility: hidden;
       }
     }
   }

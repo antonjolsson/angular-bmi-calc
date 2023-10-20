@@ -15,10 +15,16 @@ export class AppComponent {
   weight = -1
   bmi = -1
   bmiEverChanged = false
+  showResultSection = false
 
   onLengthChange($event: number) {
     this.length = $event
     this.onInputChange()
+  }
+
+  onWeightChange($event: number) {
+    this.weight = $event
+    this.onInputChange();
   }
 
   private onInputChange() {
@@ -29,10 +35,12 @@ export class AppComponent {
       this.bmi = -1
     }
     console.log(this.bmi)
+    this.showResultSection = false
   }
 
-  onWeightChange($event: number) {
-    this.weight = $event
-    this.onInputChange();
+  onButtonClick() {
+    if (this.bmi > -1) {
+      this.showResultSection = true
+    }
   }
 }

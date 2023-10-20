@@ -8,7 +8,9 @@
       <app-input [labelText]="lengthUnit" [placeholder]="lengthPlaceholder" (newChangeEvent)="onLengthChange($event)"></app-input>
       <app-input [labelText]="weightUnit" [placeholder]="weightPlaceholder" (newChangeEvent)="onWeightChange($event)"></app-input>
     </div>
-    <app-compute-btn [bmi]="bmi" [bmiEverChanged]="bmiEverChanged"></app-compute-btn>
+    <app-compute-btn [bmi]="bmi" [bmiEverChanged]="bmiEverChanged" (newClickEvent)="onButtonClick()"></app-compute-btn>
+    <app-result-section [bmi]="bmi" [length]="length" [show]="showResultSection" [className]="showResultSection ? 'visible' : 'hidden'">
+    </app-result-section>
   </main>
 </div>
 
