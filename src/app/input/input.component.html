@@ -1,4 +1,4 @@
 <label>
-  <input type="number" placeholder={{placeholder}} (input)="onInput($event)">
+  <input type="number" placeholder={{placeholder}} (input)="onInput($event)" (keydown)="onKeyDown($event)">
   {{labelText}}
 </label>

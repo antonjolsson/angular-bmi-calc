@@ -5,8 +5,10 @@
   </header>
   <main>
     <div id="input-container">
-      <app-input [labelText]="lengthUnit" [placeholder]="lengthPlaceholder" (newChangeEvent)="onLengthChange($event)"></app-input>
-      <app-input [labelText]="weightUnit" [placeholder]="weightPlaceholder" (newChangeEvent)="onWeightChange($event)"></app-input>
+      <app-input [labelText]="lengthUnit" [placeholder]="lengthPlaceholder" (newSubmitEvent)="onButtonClick()"
+                 (newChangeEvent)="onLengthChange($event)"></app-input>
+      <app-input [labelText]="weightUnit" [placeholder]="weightPlaceholder" (newSubmitEvent)="onButtonClick()"
+                 (newChangeEvent)="onWeightChange($event)"></app-input>
     </div>
     <app-compute-btn [bmi]="bmi" [bmiEverChanged]="bmiEverChanged" [showResultSection]="showResultSection"
                      (newClickEvent)="onButtonClick()"></app-compute-btn>

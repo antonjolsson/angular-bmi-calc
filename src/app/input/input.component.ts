@@ -9,8 +9,15 @@ export class InputComponent {
   @Input() labelText = '';
   @Input() placeholder = -1;
   @Output() newChangeEvent = new EventEmitter<number>();
+  @Output() newSubmitEvent = new EventEmitter<void>();
 
   onInput($event: Event) {
     this.newChangeEvent.emit(($event.currentTarget as HTMLInputElement).valueAsNumber)
+  }
+
+  onKeyDown($event: KeyboardEvent) {
+    if ($event.key === 'Enter') {
+      this.newSubmitEvent.emit()
+    }
   }
 }
