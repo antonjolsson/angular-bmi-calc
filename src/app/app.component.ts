@@ -13,8 +13,10 @@ export class AppComponent {
   weightPlaceholder = 73;
   length = -1
   weight = -1
+
   bmi = -1
   bmiEverChanged = false
+
   showResultSection = false
 
   onLengthChange($event: number) {
@@ -34,7 +36,6 @@ export class AppComponent {
     } else {
       this.bmi = -1
     }
-    console.log(this.bmi)
     this.showResultSection = false
   }
 
@@ -42,5 +43,12 @@ export class AppComponent {
     if (this.bmi > -1) {
       this.showResultSection = true
     }
+  }
+
+  getVisibilityClass() {
+    if (this.showResultSection) {
+      return 'fade-in'
+    }
+    return 'hidden'
   }
 }

@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
 export class ResultSectionComponent {
   @Input() bmi = -1
   @Input() length = -1
-  @Input() show = false
+  @Input() visibilityClass = 'hidden'
 
   getVerdict(): string {
     if (this.bmi < 20) {

@@ -12,7 +12,7 @@
     </div>
     <app-compute-btn [bmi]="bmi" [bmiEverChanged]="bmiEverChanged" [showResultSection]="showResultSection"
                      (newClickEvent)="onButtonClick()"></app-compute-btn>
-    <app-result-section [bmi]="bmi" [length]="length" [className]="showResultSection ? 'visible' : 'hidden'">
+    <app-result-section [bmi]="bmi" [length]="length" [visibilityClass]="getVisibilityClass()">
     </app-result-section>
   </main>
 </div>
