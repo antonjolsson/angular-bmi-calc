@@ -10,8 +10,9 @@
       animation: fade-in 1.0s forwards;
   }
 
-  &.fade-out {
+  &.hidden {
     animation: none;
+    user-select: none;
   }
 }
 
