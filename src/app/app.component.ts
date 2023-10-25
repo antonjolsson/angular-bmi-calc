@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+const DEBUG_VERDICT_ON_LOAD = true
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +13,9 @@ export class AppComponent {
   weightUnit = 'kg';
   lengthPlaceholder = 182;
   weightPlaceholder = 73;
+
+  defaultLengthValue = DEBUG_VERDICT_ON_LOAD ? 182 : -1;
+  defaultHeightValue = DEBUG_VERDICT_ON_LOAD ? 73 : -1;
   length = -1
   weight = -1
 
@@ -32,6 +37,11 @@ export class AppComponent {
   private onInputChange() {
     if (this.length > 0 && this.weight > 0) {
       this.bmi = this.weight / Math.pow(this.length / 100, 2)
+      if (DEBUG_VERDICT_ON_LOAD && !this.bmiEverChanged) {
+        this.onButtonClick()
+        this.bmiEverChanged = true
+        return
+      }
       this.bmiEverChanged = true
     } else {
       this.bmi = -1

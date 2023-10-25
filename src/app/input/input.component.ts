@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -8,8 +8,16 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 export class InputComponent {
   @Input() labelText = '';
   @Input() placeholder = -1;
+  @Input() defaultValue = -1
   @Output() newChangeEvent = new EventEmitter<number>();
   @Output() newSubmitEvent = new EventEmitter<void>();
+
+  ngOnChanges(changes: SimpleChanges) {
+    const currentValue = changes['defaultValue'].currentValue
+    if (currentValue > -1) {
+      this.newChangeEvent.emit(currentValue)
+    }
+  }
 
   onInput($event: Event) {
     this.newChangeEvent.emit(($event.currentTarget as HTMLInputElement).valueAsNumber)

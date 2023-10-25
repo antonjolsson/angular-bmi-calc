@@ -5,9 +5,9 @@
   </header>
   <main>
     <div id="input-container">
-      <app-input [labelText]="lengthUnit" [placeholder]="lengthPlaceholder" (newSubmitEvent)="onButtonClick()"
+      <app-input [labelText]="lengthUnit" [placeholder]="lengthPlaceholder" [defaultValue]="defaultLengthValue" (newSubmitEvent)="onButtonClick()"
                  (newChangeEvent)="onLengthChange($event)"></app-input>
-      <app-input [labelText]="weightUnit" [placeholder]="weightPlaceholder" (newSubmitEvent)="onButtonClick()"
+      <app-input [labelText]="weightUnit" [placeholder]="weightPlaceholder" [defaultValue]="defaultHeightValue" (newSubmitEvent)="onButtonClick()"
                  (newChangeEvent)="onWeightChange($event)"></app-input>
     </div>
     <app-compute-btn [bmi]="bmi" [bmiEverChanged]="bmiEverChanged" [showResultSection]="showResultSection"
