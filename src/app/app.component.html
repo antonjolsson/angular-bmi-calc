@@ -4,14 +4,16 @@
     <h2>The naked truth</h2>
   </header>
   <main>
-    <div id="input-container">
-      <app-input [labelText]="lengthUnit" [placeholder]="lengthPlaceholder" [defaultValue]="defaultLengthValue" (newSubmitEvent)="onButtonClick()"
-                 (newChangeEvent)="onLengthChange($event)"></app-input>
-      <app-input [labelText]="weightUnit" [placeholder]="weightPlaceholder" [defaultValue]="defaultHeightValue" (newSubmitEvent)="onButtonClick()"
-                 (newChangeEvent)="onWeightChange($event)"></app-input>
+    <div id="controls">
+      <div id="input-container">
+        <app-input [labelText]="lengthUnit" [placeholder]="lengthPlaceholder" [defaultValue]="defaultLengthValue" (newSubmitEvent)="onButtonClick()"
+                   (newChangeEvent)="onLengthChange($event)"></app-input>
+        <app-input [labelText]="weightUnit" [placeholder]="weightPlaceholder" [defaultValue]="defaultHeightValue" (newSubmitEvent)="onButtonClick()"
+                   (newChangeEvent)="onWeightChange($event)"></app-input>
+      </div>
+      <app-compute-btn [bmi]="bmi" [bmiEverChanged]="bmiEverChanged" [showResultSection]="showResultSection"
+                       (newClickEvent)="onButtonClick()"></app-compute-btn>
     </div>
-    <app-compute-btn [bmi]="bmi" [bmiEverChanged]="bmiEverChanged" [showResultSection]="showResultSection"
-                     (newClickEvent)="onButtonClick()"></app-compute-btn>
     <app-result-section [bmi]="bmi" [length]="length" [visibilityClass]="getVisibilityClass()">
     </app-result-section>
   </main>

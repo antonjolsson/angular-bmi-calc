@@ -1,0 +1,56 @@
+@use '../../../styles';
+@use '../../app.component';
+
+$color: black;
+$meter-height: 3rem;
+
+.bmi-meter-numeric-axis {
+  // border-bottom: 1px solid $color;
+
+  .bmi-meter-numeric-tick {
+    bottom: 5px;
+
+    &::after {
+      content: ' ';
+      vertical-align: bottom;
+      height: 7px;
+      border-left: 1px solid $color;
+      bottom: -7px;
+      position: absolute;
+    }
+  }
+}
+
+.bmi-meter-class-tick {
+  top: 5px;
+}
+
+.bmi-meter-numeric-axis, .bmi-meter-class-axis {
+  width: 100%;
+  position: relative;
+  height: 10px;
+
+  .bmi-meter-numeric-tick, .bmi-meter-class-tick {
+    @include app.control;
+
+    position: absolute;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    translate: -50%;
+  }
+}
+
+.bmi-meter {
+  width: 100%;
+  height: $meter-height;
+  border-radius: 10px;
+  border: 2px solid white;
+  // outline: 1px solid black;
+  background: linear-gradient(90deg, rgb(128, 0, 255), blue 7.6%, green 34.8%, styles.$overweight-color 69.6%,
+    red 92.4%, rgb(255, 0, 128));
+  box-shadow: 0.1rem 0.1rem 0 black;
+}
+
+

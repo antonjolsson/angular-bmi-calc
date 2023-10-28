@@ -1,4 +1,4 @@
-<div class="bmi-meter"></div>
+<app-bmi-meter></app-bmi-meter>
 <p class="result-p {{visibilityClass}}">Your BMI is <span [class]="getVerdict() + ' bold'">{{bmi.toFixed(2)}}</span>,
   which indicates you {{getVerdict() === 'obesity' ? 'have' : 'are'}} <span [class]="getVerdict() + ' bold'">{{getVerdict()}}</span>.</p>
 <p class="result-p {{visibilityClass}}">For a normal BMI (18.5 - 25.0), you should weigh between <span class="bold">{{getWeight(length, 18.5).toFixed(2)}}</span>

@@ -1,5 +1,7 @@
 @use "../styles";
 
+$section-gap: 3rem;
+
 @mixin control {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
@@ -21,7 +23,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: $section-gap;
 
   header {
     display: flex;
@@ -54,19 +56,27 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: $section-gap;
     max-width: 30rem;
 
-    #input-container {
+    #controls {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: 1rem;
-      height: 2rem;
 
-      app-input {
-        height: 100%;
+      #input-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        height: 2rem;
+
+        app-input {
+          height: 100%;
+        }
       }
     }
 

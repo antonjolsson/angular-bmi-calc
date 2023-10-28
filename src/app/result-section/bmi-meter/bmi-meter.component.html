@@ -1,0 +1,10 @@
+<div class="bmi-meter-numeric-axis">
+  <div class="bmi-meter-numeric-tick"
+       *ngFor="let entry of numericLabelMap.entries()" [ngStyle]="{'left': entry[0] + '%'}">{{entry[1]}}</div>
+</div>
+<div class="bmi-meter"></div>
+<div class="bmi-meter-class-axis">
+  <div class="bmi-meter-class-tick"
+       *ngFor="let entry of classLabelMap.entries()" [ngStyle]="{'left': entry[0] + '%'}">{{entry[1]}}</div>
+</div>
+
