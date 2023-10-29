@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
-const DEBUG_VERDICT_ON_LOAD = true
+const DEBUG_VERDICT_ON_LOAD = false
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'angular-bmi-calc';
   lengthUnit = 'cm';

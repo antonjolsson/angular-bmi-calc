@@ -5,13 +5,14 @@ import {Component, Input} from '@angular/core';
   templateUrl: './result-section.component.html',
   styleUrls: ['./result-section.component.scss']
 })
+
 export class ResultSectionComponent {
   @Input() bmi = -1
   @Input() length = -1
   @Input() visibilityClass = 'hidden'
 
   getVerdict(): string {
-    if (this.bmi < 20) {
+    if (this.bmi < 18.5) {
       return 'underweight'
     }
     if (this.bmi < 25) {
