@@ -16,7 +16,7 @@ export class AppComponent {
   weightPlaceholder = 73;
 
   defaultLengthValue = DEBUG_VERDICT_ON_LOAD ? 182 : -1;
-  defaultHeightValue = DEBUG_VERDICT_ON_LOAD ? 73 : -1;
+  defaultHeightValue = DEBUG_VERDICT_ON_LOAD ? 173 : -1;
   length = -1
   weight = -1
 

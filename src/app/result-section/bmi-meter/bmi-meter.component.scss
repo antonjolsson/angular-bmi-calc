@@ -2,7 +2,7 @@
 @use '../../app.component';
 
 $color: black;
-$meter-height: 3rem;
+$meter-height: 2.6rem;
 
 .bmi-meter-numeric-axis {
   .bmi-meter-numeric-tick {
@@ -11,9 +11,9 @@ $meter-height: 3rem;
     &::after {
       content: ' ';
       vertical-align: bottom;
-      height: 7px;
+      height: 5px;
       border-left: 1px solid $color;
-      bottom: -7px;
+      bottom: -5px;
       position: absolute;
     }
   }
@@ -45,22 +45,23 @@ $meter-height: 3rem;
   height: $meter-height;
   background: styles.$light-grey;
   border-radius: 10px;
-  border: 2px solid white;
+  outline: 2px solid white;
   position: relative;
   z-index: -10;
 
   .bmi-meter-container {
     height: 100%;
-    z-index: -1;
     position: absolute;
     overflow: hidden;
     width: 0;
+    z-index: -1;
 
     .bmi-meter {
       width: 26rem;
       height: 100%;
-      border-radius: 10px 0 0 10px;
+      border-radius: 10px;
       z-index: -2;
+      position: absolute;
     }
   }
 }
