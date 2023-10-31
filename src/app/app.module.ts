@@ -6,6 +6,7 @@ import { InputComponent } from './input/input.component';
 import { ComputeBtnComponent } from './compute-btn/compute-btn.component';
 import { ResultSectionComponent } from './result-section/result-section.component';
 import { BmiMeterComponent } from './result-section/bmi-meter/bmi-meter.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BmiMeterComponent } from './result-section/bmi-meter/bmi-meter.componen
     BmiMeterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

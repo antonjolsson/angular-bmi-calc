@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-const DEBUG_VERDICT_ON_LOAD = false
+const DEBUG_VERDICT_ON_LOAD = true
 
 @Component({
   selector: 'app-root',
