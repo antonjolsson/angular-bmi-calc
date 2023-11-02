@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, SimpleChanges, ViewChild} from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef, Input, SimpleChanges, ViewChild} from '@angular/core';
 
 const BMI_RANGE_MAX = 32.5
 const BMI_RANGE_MIN = 16
@@ -15,6 +15,8 @@ export class BmiMeterComponent {
   @ViewChild('bmiMeterBg')
   bmiMeterBg: ElementRef | undefined
   animation: Animation | undefined
+
+  constructor(private cdRef: ChangeDetectorRef) { }
 
   percToBmiMap = new Map<number, string>([
     [100 * 2.5 / 16.5, '18.5'],
@@ -40,8 +42,8 @@ export class BmiMeterComponent {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    const currentValue = changes['visibilityClass'].currentValue
-    if (currentValue !== 'hidden') {
+    const currentValue = changes['visibilityClass']?.currentValue
+    if (currentValue && currentValue !== 'hidden') {
       const widthExpand = [
         {width: 0},
         {width: this.getBmiAsPerc() + '%'}
@@ -55,8 +57,13 @@ export class BmiMeterComponent {
       // @ts-ignore
       this.animation = meterContainer.animate(widthExpand, widthTiming)
     } else {
-      this.animation!.cancel()
+      this.animation?.cancel()
     }
   }
 
+  ngAfterViewChecked() {
+    this.cdRef.detectChanges();
+  }
+
+  protected readonly Array = Array;
 }
