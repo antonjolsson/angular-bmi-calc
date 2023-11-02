@@ -101,9 +101,11 @@ p {
   footer {
     display: flex;
     justify-content: center;
+
     a {
       @extend p;
-      font-size: 0.7rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.05rem;
       text-decoration: none;
       position: fixed;
       bottom: 1rem;
