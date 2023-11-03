@@ -1,6 +1,7 @@
 @use "../styles";
 
 $section-gap: 3rem;
+$section-gap-mobile: 4.0rem;
 
 @mixin control {
   font-family: "Roboto Condensed", sans-serif;
@@ -44,11 +45,18 @@ p {
       font-size: 2.5rem;
       text-transform: uppercase;
       color: styles.$dark-text;
+
+      @media (width <= 600px) {
+        font-size: 3.3rem;
+        white-space: break-spaces;
+        width: min-content;
+        text-align: center;
+      }
     }
 
     h2 {
       font-family: Arizonia, cursive;
-      font-size: 2.0rem;
+      font-size: 3.0rem;
       color: styles.$primary-color;
       text-shadow: 0 0 5px #ffffff;
     }

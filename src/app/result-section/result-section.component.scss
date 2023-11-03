@@ -15,6 +15,14 @@ app-bmi-meter {
   opacity: 0;
   margin: 0.7rem 0;
 
+  @media (width <= 600px) {
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+
+    font-size: 2.0rem;
+  }
+
   &.fade-in {
       animation: fade-in 1.0s 1.2s forwards;
   }

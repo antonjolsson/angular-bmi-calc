@@ -56,4 +56,9 @@ button {
   &.disabled {
     animation: 0.2s enable-button-backwards forwards;
   }
+
+  @media (width <= 600px) {
+    height: 3.0rem;
+    font-size: 0.9rem;
+  }
 }
