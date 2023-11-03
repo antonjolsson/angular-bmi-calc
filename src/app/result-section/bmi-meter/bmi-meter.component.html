@@ -10,7 +10,7 @@
 </div>
 <div class="bmi-meter-class-axis">
   <div class="bmi-meter-class-tick"
-       *ngFor="let entry of Array.from(percToBmiMap.entries())" [ngStyle]="{'left': entry[0] + '%'}">{{entry[1]}}
+       *ngFor="let entry of Array.from(percToLabelMap.entries())" [ngStyle]="{'left': entry[0] + '%'}">{{entry[1]}}
   </div>
 </div>
 
