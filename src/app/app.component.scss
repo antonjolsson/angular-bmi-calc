@@ -101,36 +101,16 @@ p {
   footer {
     display: flex;
     justify-content: center;
+    position: fixed;
+    bottom: 1rem;
 
     a {
-      @extend p;
-      font-size: 0.6rem;
-      letter-spacing: 0.05rem;
-      text-decoration: none;
-      position: fixed;
-      bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 0.4rem;
-
-      span {
-        transition: all 0.3s;
-        opacity: 0;
-      }
-
-      &:hover {
-        span, img {
+      &:hover img {
           opacity: 0.75;
-        }
       }
 
-      &:active {
-        span, img {
+      &:active img {
           opacity: 1;
-
-        }
       }
 
       img {
